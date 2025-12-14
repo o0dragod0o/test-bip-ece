@@ -79,7 +79,7 @@ void updateDisplay() {
     display.print(F("SON: "));
     display.println(alertSound);
     display.setCursor(0, 58);
-    display.print(F("[A6] RETOUR"));
+    display.print(F("[Bouton] RETOUR"));
   }
   // --- SOUS-MENUS ---
   else if (currentMode == SoundEditMode) {
@@ -92,7 +92,7 @@ void updateDisplay() {
     else display.println(F("CONTINU"));
     display.setTextSize(1);
     display.setCursor(0, 55);
-    display.print(F("Tourner=Test [A6]=OK"));
+    display.print(F("Tourner=Test Bouton=OK"));
   }
   else if (currentMode == PseudoMode) {
     display.println(F("EDIT PSEUDO:"));
@@ -105,7 +105,7 @@ void updateDisplay() {
     display.print(F("^"));
     display.setCursor(0, 50); display.print(F("Let: "));
     display.println(currentLetter);
-    display.print(F("[SW]SUIV [A6]SAVE"));
+    display.print(F("[SW]SUIV [Bouton]SAVE"));
   }
   else if (currentMode == CanalEditMode) {
     display.println(F("FREQ (0-125):"));
@@ -115,7 +115,7 @@ void updateDisplay() {
     display.print(radioChannel);
     display.setTextSize(1);
     display.setCursor(0, 55);
-    display.print(F("[A6] SAUVEGARDER"));
+    display.print(F("[Bouton] SAUVEGARDER"));
   }
   else if (currentMode == SlotEditMode) {
     display.println(F("MODE RADIO:"));
@@ -127,7 +127,7 @@ void updateDisplay() {
       display.setTextSize(1);
     }
     display.setCursor(0, 55);
-    display.print(F("[A6] SAUVEGARDER"));
+    display.print(F("[Bouton] SAUVEGARDER"));
   }
   else if (currentMode == AlarmMode) {
       display.print(F("DE: "));
@@ -135,7 +135,7 @@ void updateDisplay() {
       display.setCursor(0, 15);
       display.println(sharedBuffer); 
       display.setCursor(0, 55);
-      display.print(F("[A6] ACQUITTER"));
+      display.print(F("[Bouton] ACQUITTER"));
   } 
   else if (currentMode == PriorityMode) {
     display.println(F("URGENCE ?"));
@@ -147,7 +147,7 @@ void updateDisplay() {
     else display.println(F("ELEVE"));
     display.setTextSize(1);
     display.setCursor(0, 55);
-    display.print(F("[A6] ENVOYER"));
+    display.print(F("[Bouton] ENVOYER"));
   }
 
   // --- MODE ECRITURE ---
