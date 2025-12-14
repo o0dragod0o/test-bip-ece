@@ -10,7 +10,7 @@
 
 // --- ADRESSES EEPROM ---
 #define AddrMarker   0   
-#define AddrCannel  1   
+#define AddrChannel  1   
 #define AddrSlot     2   
 #define AddrSound    3   
 #define AddrPseudo   10  
