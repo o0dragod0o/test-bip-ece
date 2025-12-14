@@ -27,7 +27,7 @@ extern byte radioSlot;
 extern byte alertSound; 
 
 extern Mode currentMode;
-extern int slectionMenu; 
+extern int selectionMenu; 
 extern unsigned long buzzerTimer;
 extern int buzzerStep;
 
