@@ -25,8 +25,8 @@
 #define BluePin 9
 #define EncCLK 3       
 #define ENC_DT 4       
-#define NCSW 2       
-#define senBtn A6    
+#define EncSW 2 
+#define SendBtn A6    
 
 // --- ECRAN ---
 #define SCREEN_WIDTH 128
