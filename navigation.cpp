@@ -128,8 +128,8 @@ void handleNavigation() {
     // 5. EDITER PSEUDO
     case PseudoMode:
       if (dir != 0) { 
-         if(dir > 0) lettreSuivante(); 
-         else lettrePrecedente(); 
+         if(dir > 0) nextLetter(); 
+         else prevLetter(); 
          updateDisplay(); 
       }
       if (click) { // Lettre suivante
