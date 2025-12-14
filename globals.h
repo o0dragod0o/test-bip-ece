@@ -15,7 +15,7 @@ extern const byte pipes[][6];
 extern char currentLetter; 
 extern char sharedBuffer[MaxMessageLen]; 
 extern char myPseudo[PseudoLen]; 
-extern char receivedPseudo[PseudoLen;     
+extern char receivedPseudo[PseudoLen];     
 
 extern int cursorPosition; 
 extern byte currentMsgId; 
