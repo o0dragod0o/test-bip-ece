@@ -6,6 +6,6 @@ void initAffichage();
 void updateDisplay();
 void setLedColor(byte priority);
 void previewSound();
-void handleAlarme();
+void handleAlarm();
 
 #endif
