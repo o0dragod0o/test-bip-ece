@@ -31,17 +31,17 @@ void handleNavigation() {
     // 1. MENU PRINCIPAL
     case MainMenu:
       if (dir != 0) { 
-        selectionMenu = !menuSelection; // Bascule 0 <-> 1
+        selectionMenu = !selectionMenu; // Bascule 0 <-> 1
         updateDisplay(); 
       }
       if (click) { 
-        if (menuSelection == 0) { 
+        if (selectionMenu == 0) { 
           currentMode = WritingMode; 
           cursorPosition = 0; 
           memset(sharedBuffer, 0, MaxMessageLen); 
         } else { 
           currentMode = SettingsMenu; 
-          menuSelection = 0; 
+          selectionMenu = 0; 
         }
         updateDisplay();
       }
@@ -50,24 +50,24 @@ void handleNavigation() {
     case SettingsMenu:
       if (dir != 0) {
          if(dir > 0) { // Descente
-            menuSelection++; 
-            if(menuSelection > 3) menuSelection = 0;
+            selectionMenu++; 
+            if(selectionMenu > 3) selectionMenu = 0;
          } else {      // Montée
-            menuSelection--; 
-            if(menuSelection < 0) menuSelection = 3;
+            selectionMenu--; 
+            if(selectionMenu < 0) selectionMenu = 3;
          }
          updateDisplay();
       }
       if (click) {
-         if (menuSelection == 0) {      // PSEUDO
+         if (selectionMenu == 0) {      // PSEUDO
             currentMode = PseudoMode; 
             cursorPosition = strlen(myPseudo); 
             if(cursorPosition >= PseudoLen - 1) cursorPosition = 0; // Sécurité
             currentLetter = 'A'; 
          } 
-         else if (menuSelection == 1) currentMode = CanalEditMode;
-         else if (menuSelection == 2) currentMode = SlotEditMode;
-         else if (menuSelection == 3) currentMode = SoundEditMode;
+         else if (selectionMenu == 1) currentMode = CanalEditMode;
+         else if (selectionMenu == 2) currentMode = SlotEditMode;
+         else if (selectionMenu == 3) currentMode = SoundEditMode;
          updateDisplay();
       }
       if (a6) { // RETOUR
