@@ -47,8 +47,8 @@ struct Packet {
   byte packetIndex;   
   byte totalPackets;
   byte priority;      
-  char senderName[PSEUDO_LEN]; 
-  char payload[PACKET_DATA_SIZE]; 
+  char senderName[PseudoLen]; 
+  char payload[PacketDataSize]; 
 };
 
 enum Mode {
