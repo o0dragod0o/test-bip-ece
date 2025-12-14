@@ -12,7 +12,7 @@ void nextLetter() {
   else currentLetter++;
 }
 
-void PrevLetter() {
+void prevLetter() {
   if (currentLetter == 'A') currentLetter = ' '; 
   else if (currentLetter == ' ') currentLetter = '9'; 
   else if (currentLetter == '0') currentLetter = 'Z'; 
